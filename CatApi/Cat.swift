@@ -10,9 +10,13 @@ import SwiftData
 
 @Model
 final class Cat {
+    @Attribute(.unique) var id: String
     var name: String
+    var url: String
     
-    init(name: String) {
+    init(id: String, name: String, url: String) {
+        self.id = id
         self.name = name
+        self.url = url
     }
 }
